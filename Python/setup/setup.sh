@@ -259,7 +259,7 @@ case ${osinfo} in
   ;;
   # Arch or Manjaro Dependency Installation
   Arch | Manjaro)
-    pacman -Syu
+    pacman -Syu --noconfirm
     echo '[*] Installing Arch Dependencies'
     for pkg_name in cmake python3 python-xvfbwrapper python-pip python-netaddr firefox; do
         pacman -S --noconfirm "${pkg_name}"
